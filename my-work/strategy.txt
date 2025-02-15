@@ -1,0 +1,49 @@
+### Strategy 
+
+## General Knowledge
+---
+    - No missing values
+    - About 2 million rows
+
+## Models 
+
+# Classical Forecasting 
+---
+* ARIMA
+* SARIMA
+
+# Advanced Forecasting
+---
+* LSTM
+
+
+
+## Patterns
+
+# Group Prices - ["open", "high", "low", "close"] 
+    - Low magnitude (around 1)
+    - Shape: "mountain"
+
+# Group Volume - ["volume", "quote_asset_volume", "number_of_trades"] 
+    - High magnitude (thousands to millions)
+    - Shape: "forest"
+
+# Taker Buy Volume - ["taker_buy_base_volume", "taker_buy_quote_volume"] 
+
+# Target - ["target"] 
+
+
+## Preprocess
+
+# Subset Selection
+---
+For [Classical Forecasting] models use time-window of most recent 3-6 months
+    + Avoids problems related to market regime shift 
+    + Patterns may change significantly over years in the cryptomarket
+
+# Smoothing / Noise Reduction Techniques
+---
+* Moving Average
+* Exponential Moving Average
+* Wavelets
+* Fast Fourier Transform
